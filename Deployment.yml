@@ -4,7 +4,7 @@ apiVersion: apps/v1
 metadata:
    name: mrdevops
 spec:
-   replicas: 2
+   replicas: 1
    selector:      # tells the controller which pods to watch/belong to
     matchLabels:
      app: mrdevops
@@ -15,7 +15,7 @@ spec:
       spec:
        containers:
         - name: mrdevops
-          image: samax7/kubernetes:v1.latest
+          image: samax7/your
           imagePullPolicy: Always
           ports:
           - containerPort: 80
